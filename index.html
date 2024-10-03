@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscador de Países</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Buscador de Países</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="subHeader">
+        <div class="inputBusca"> 
+            Pesquisar país: 
+            <input onkeyup="buscarPaises(this.value)" type="text" /> 
+        </div>
+        <div class="filtros">
+            <label>
+                <input value="all" onchange="pesquisarPaisPorFiltro(this.value)" type="radio" name="filtros" checked />
+                <span>Todos</span>
+            </label>
+            <label>
+                <input value="america" onchange="pesquisarPaisPorFiltro(this.value)" type="radio" name="filtros" />
+                <span>América</span>
+            </label>
+            <label>
+                <input value="europe" onchange="pesquisarPaisPorFiltro(this.value)" type="radio" name="filtros" />
+                <span>Europa</span>
+            </label>
+            <label>
+                <input value="asia" onchange="pesquisarPaisPorFiltro(this.value)" type="radio" name="filtros" />
+                <span>Ásia</span>
+            </label>
+            <label>
+                <input value="africa" onchange="pesquisarPaisPorFiltro(this.value)" type="radio" name="filtros" />
+                <span>África</span>
+            </label>
+        </div>
+      
+      
+    </div>
+    
+    <hr />
+    <h2>Total de países: <span id="qtPaises">250</span></h2>
+    <div class="todosPaises"></div>
+    
+    <script src="code.js"></script>
+</body>
+</html>
